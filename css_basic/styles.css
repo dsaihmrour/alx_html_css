@@ -1,0 +1,52 @@
+header, footer, article, aside {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+/* Make the entire body a flex container in column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Make sure it takes full height of the viewport */
+  margin: 0;
+}
+
+/* Make the main section a row flex container */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* Allow main to grow and fill available space */
+}
+
+/* Make the article take up 2/3 of the width */
+article {
+  flex: 2;
+  overflow-y: auto; /* Scroll vertically if content overflows */
+}
+
+/* Make the aside take up 1/3 of the width */
+aside {
+  flex: 1;
+  overflow-y: auto; /* Scroll vertically if content overflows */
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background-color: #eee;
+  padding: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.card {
+  border: 2px solid #444;
+  padding: 1rem;
+  background: #fafafa;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
