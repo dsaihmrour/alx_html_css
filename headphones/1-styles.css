@@ -1,0 +1,221 @@
+/* CSS Reset and Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF6565;
+    --primary-dark: #e55555;
+    --text-dark: #071629;
+    --text-light: #979797;
+    --white: #FFFFFF;
+    --background-dark: #071629;
+    --max-width: 1000px;
+    --font-family: 'Source Sans Pro', Arial, sans-serif;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 27px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 41px;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: lowercase;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 20px;
+    height: 2px;
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Hero Section */
+.hero {
+    background: url(/headphones/images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 637px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 13px 31px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 22px;
+    transition: var(--transition);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 65px;
+}
+
+.cta-button:hover,
+.cta-button:active {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* What We Do Section (Generic) */
+.section {
+    padding: 110px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 37px;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--text-dark);
+    max-width: 637px;
+    margin: 0 auto 95px;
+    opacity: 0.9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0 58px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.grid-item {
+    text-align: center;
+    transition: var(--transition);
+    padding: 0 20px;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 60px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
