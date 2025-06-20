@@ -7,11 +7,8 @@
 
 :root {
     --primary-color: #FF6565;
-    --primary-dark: #e55555;
     --text-dark: #071629;
-    --text-light: #979797;
     --white: #FFFFFF;
-    --background-dark: #071629;
     --max-width: 1000px;
     --font-family: 'Source Sans Pro', Arial, sans-serif;
     --transition: all 0.3s ease;
@@ -51,14 +48,8 @@ body {
     align-items: center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
+.logo img {
+    display: block;
 }
 
 .nav-list {
@@ -97,18 +88,6 @@ body {
     height: 2px;
     background: var(--white);
     transition: var(--transition);
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hero Section */
@@ -172,7 +151,35 @@ body {
     opacity: 0.9;
 }
 
-/* What We Do Section (Generic) */
+/* Responsive Hero adjustments */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 100vh;
+        padding: 0 10px;
+    }
+    
+    .hero-content {
+        padding-top: 150px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+/* What We Do Section - Generic Reusable */
+
 .section {
     padding: 110px 0;
     background: var(--white);
@@ -215,7 +222,8 @@ body {
 }
 
 .icon {
-    font-size: 60px;
+    font-size: 60px;  /* generic font icon size */
     color: var(--primary-color);
     margin-bottom: 25px;
 }
+
